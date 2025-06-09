@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- Default language set to English -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang-key="pageTitle">Smart Data Combiner - Powerful List Generation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo" data-lang-key="headerLogo">Smart Combiner</div>
+            <div class="language-selector-container">
+                <label for="languageSelector" data-lang-key="languageLabel">Language:</label>
+                <select id="languageSelector">
+                    <option value="en" selected>English (EN)</option>
+                    <option value="br">Português (BR)</option> 
+                    <option value="es">Español</option>
+                    <option value="de">Deutsch</option>
+                    <option value="fr">Français</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                    <option value="it">Italiano</option>
+                </select>
+            </div>
+            <nav class="navigation-menu">
+                <button class="hamburger-button" aria-label="Toggle navigation" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="menu-links-list">
+                    <!-- Future links can be added here -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="content-container">
+        <h1 data-lang-key="mainHeading">Smart Data Combiner</h1>
+        <p data-lang-key="subHeading">Boost your productivity by generating data combinations and permutations with power and precision.</p>
+
+        <div class="advertisement-space">
+            <span data-lang-key="adSpaceTopText">[Advertisement Space - Google AdSense]</span>
+            <p data-lang-key="adSpaceTopSubtext">Ads help keep the free version of this powerful tool running!</p>
+        </div>
+
+        <h2 data-lang-key="section1Title">1. Enter Your Variables</h2>
+        <div id="listInputsContainer">
+            <!-- Dynamic list inputs will be added here by script.js -->
+        </div>
+        <div style="text-align: center; margin-top: 10px;"> <!-- Add margin-top for spacing -->
+            <button id="addListButton" class="add-list-button" data-lang-key="addListButton">+ Add New List</button>
+        </div>
+        
+        <!-- Live Combination Count Preview - Moved Here -->
+        <div class="live-preview-info" id="livePreviewContainer">
+            <span data-lang-key="livePreviewLabel">Potential combinations:</span>
+            <span id="liveCombinationCountDisplay">0</span>
+        </div>
+
+        <p style="margin-top: 15px; font-size: 1em; text-align:center;" class="premium-cta-text"> <!-- Moved premium cta slightly down -->
+            <a href="#premiumSection" style="color: var(--purple-btn); text-decoration: underline;" data-lang-key="unlockPremiumLink">Unlock more variables with Premium!</a>
+        </p>
+
+
+        <h2 data-lang-key="section2Title">2. Configure Generation</h2>
+        <div class="configuration-group">
+            <div>
+                <label data-lang-key="generationTypeLabel">Generation Type:</label>
+                <label><input type="radio" name="generationType" value="combinations" checked> <span data-lang-key="combinationsLabel">Combinations (Order doesn't matter)</span></label>
+                <label><input type="radio" name="generationType" value="permutations"> <span data-lang-key="permutationsLabel">Permutations (Order matters)</span></label>
+            </div>
+            <div style="margin-top: 15px;">
+                <label data-lang-key="itemSeparatorLabel">Item Separator:</label>
+                <label><input type="radio" name="separatorType" value="space" checked> <span data-lang-key="spaceSeparator">Space</span></label>
+                <label><input type="radio" name="separatorType" value="comma"> <span data-lang-key="commaSeparator">Comma (,)</span></label>
+                <label><input type="radio" name="separatorType" value="hyphen"> <span data-lang-key="hyphenSeparator">Hyphen (-)</span></label>
+                <label><input type="radio" name="separatorType" value="custom"> <span data-lang-key="otherSeparator">Other:</span></label>
+                <input type="text" id="customSeparatorInput" data-lang-placeholder-key="customSeparatorPlaceholder" placeholder="Ex: and">
+            </div>
+            <div style="margin-top: 15px;">
+                <label data-lang-key="prefixLabel">Prefix (optional):</label>
+                <input type="text" id="prefixInput" data-lang-placeholder-key="prefixPlaceholder" placeholder="Ex: 'ID-'" maxlength="20">
+            </div>
+            <div style="margin-top: 10px;">
+                <label data-lang-key="suffixLabel">Suffix (optional):</label>
+                <input type="text" id="suffixInput" data-lang-placeholder-key="suffixPlaceholder" placeholder="Ex: '-V2'" maxlength="20">
+            </div>
+        </div>
+        
+        <button id="generateButton" class="generate-button" data-lang-key="generateButton">GENERATE NOW</button>
+
+        <h2 data-lang-key="section3Title">3. Your Powerful Result</h2>
+        <div class="results-info"><span data-lang-key="totalCombinationsText">Total Combinations Generated:</span> <span id="totalCombinationsDisplay">0</span></div>
+        <textarea id="resultsTextarea" readonly></textarea>
+        <div class="result-actions-container">
+            <button id="copyResultsButton" data-lang-key="copyResultsButton">Copy Results</button>
+            <button id="downloadCsvButton" data-lang-key="downloadCsvButton">Download CSV (Premium)</button>
+        </div>
+
+        <div class="advertisement-space">
+            <span data-lang-key="adSpaceBottomText">[Advertisement Space - Google AdSense]</span>
+            <p data-lang-key="adSpaceBottomSubtext">If you value this tool, consider Premium!</p>
+        </div>
+
+        <section id="premiumSection" class="premium-section-container">
+            <h3 data-lang-key="premiumSectionTitle">Master Your Data with the Premium Plan!</h3>
+            <p data-lang-key="premiumSectionSubtitle">Remove list and item limits, generate millions of combinations, download as CSV, and enjoy an ad-free experience.</p>
+            <button data-lang-key="premiumSectionButton">Subscribe to Premium!</button>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content-container">
+            <p data-lang-key="footerCopyright">&copy; 2025 YourSite.com - All rights reserved.</p>
+            <nav class="footer-navigation">
+                <a href="#" data-lang-key="footerAbout">About</a> |
+                <a href="#" data-lang-key="footerContact">Contact</a> |
+                <a href="#" data-lang-key="footerPrivacy">Privacy Policy</a> |
+                <a href="#" data-lang-key="footerTerms">Terms of Use</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="i18n/en.js"></script>
+    <script src="i18n/br.js"></script>
+    <script src="i18n/es.js"></script>
+    <script src="i18n/de.js"></script>
+    <script src="i18n/fr.js"></script>
+    <script src="i18n/ja.js"></script>
+    <script src="i18n/ko.js"></script>
+    <script src="i18n/it.js"></script>
+    <script src="ui.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
