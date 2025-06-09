@@ -1,0 +1,249 @@
+{
+  "brand": {
+    "name": "BlendWorks"
+  },
+  
+  "site": {
+    "title": "BlendWorks - Gerador Profissional de Combinações",
+    "description": "Gere milhões de combinações de forma inteligente. Ferramenta profissional para marketing, desenvolvimento e análise de dados."
+  },
+  
+  "nav": {
+    "features": "Recursos",
+    "pricing": "Preços",
+    "course": "Curso",
+    "affiliate": "Afiliados",
+    "login": "Entrar",
+    "start": "Começar Agora",
+    "start_text": "Começar Agora"
+  },
+  
+  "hero": {
+    "title": "Gere Milhões de Combinações em Segundos",
+    "subtitle": "A ferramenta mais poderosa para criar combinações inteligentes. Perfeita para marketing, desenvolvimento, pesquisa e análise de dados.",
+    "benefit1": "Extremamente Rápido",
+    "benefit2": "Múltiplos Formatos",
+    "benefit3": "100% Seguro",
+    "benefit4": "Sem Limites",
+    "cta": {
+      "test": "Testar Grátis Agora",
+      "demo": "Ver Demonstração"
+    },
+    "stats": {
+      "combinations": "1M+",
+      "combinations_label": "Combinações Geradas",
+      "users": "50K+",
+      "users_label": "Usuários Satisfeitos",
+      "countries": "150+",
+      "countries_label": "Países"
+    },
+    "testimonial": "Economizou 20 horas por semana da nossa equipe. Ferramenta incrível!",
+    "testimonial.role": "Diretor de Marketing na TechCorp"
+  },
+  
+  "lead_magnet": {
+    "title": "📋 Baixe 50 Templates Profissionais GRÁTIS",
+    "subtitle": "Baixe nossa biblioteca completa de templates para:",
+    "benefit1": "🛒 E-commerce (produtos, variações, preços)",
+    "benefit2": "📧 Email Marketing (linhas de assunto, CTAs)",
+    "benefit3": "🔐 Geradores de senhas empresariais",
+    "benefit4": "📊 Combinações de dados para análise",
+    "benefit5": "🎨 Design (cores, layouts, formatos)",
+    "email_placeholder": "Seu email profissional",
+    "name_placeholder": "Seu nome",
+    "interest": {
+      "placeholder": "Como você vai usar?",
+      "business": "Negócios/Empresa",
+      "marketing": "Marketing Digital",
+      "development": "Desenvolvimento",
+      "research": "Pesquisa/Análise",
+      "personal": "Uso Pessoal"
+    },
+    "cta": "Baixar Grátis",
+    "privacy": "🔒 Seus dados estão seguros. Sem spam, apenas conteúdo valioso."
+  },
+  
+  "features": {
+    "title": "Recursos Poderosos",
+    "subtitle": "Tudo que você precisa para gerar combinações perfeitas",
+    "speed": {
+      "title": "Velocidade Extrema",
+      "desc": "Gere milhões de combinações em segundos com nossa tecnologia otimizada."
+    },
+    "formats": {
+      "title": "Múltiplos Formatos",
+      "desc": "Exporte para TXT, CSV, JSON, Excel com formatação profissional."
+    },
+    "unlimited": {
+      "title": "Sem Limitações",
+      "desc": "Planos premium com listas e itens ilimitados para projetos grandes."
+    },
+    "secure": {
+      "title": "100% Seguro",
+      "desc": "Seus dados são processados localmente e nunca armazenados em servidores."
+    },
+    "global": {
+      "title": "Suporte Global",
+      "desc": "Disponível em 8 idiomas com métodos de pagamento locais."
+    },
+    "api": {
+      "title": "API para Desenvolvedores",
+      "desc": "Integre com seus sistemas usando nossa poderosa API REST."
+    }
+  },
+  
+  "pricing": {
+    "title": "Escolha Seu Plano",
+    "subtitle": "Comece grátis, escale conforme cresce"
+  },
+  
+  "packages": {
+    "popular": "Mais Popular",
+    "period": "pagamento único",
+    "cta": "Começar",
+    "starter": {
+      "name": "Pacote Inicial",
+      "desc": "Perfeito para projetos pequenos",
+      "feature1": "10.000 combinações",
+      "feature2": "Até 5 listas",
+      "feature3": "Exportar TXT, CSV",
+      "feature4": "Suporte por email"
+    },
+    "professional": {
+      "name": "Pacote Profissional",
+      "desc": "Ideal para uso profissional",
+      "feature1": "100.000 combinações",
+      "feature2": "Até 15 listas",
+      "feature3": "Todos os formatos",
+      "feature4": "Suporte prioritário",
+      "feature5": "Acesso à API"
+    },
+    "enterprise": {
+      "name": "Pacote Enterprise",
+      "desc": "Para projetos grandes",
+      "feature1": "1.000.000 combinações",
+      "feature2": "Listas ilimitadas",
+      "feature3": "Todos os formatos + Personalizados",
+      "feature4": "Suporte 24/7",
+      "feature5": "Acesso completo à API",
+      "feature6": "Opção white-label"
+    }
+  },
+  
+  "trust": {
+    "secure": "Pagamento Seguro",
+    "refund": "Reembolso em 30 dias",
+    "support": "Suporte 24/7"
+  },
+  
+  "use_cases": {
+    "title": "Perfeito Para Qualquer Indústria",
+    "subtitle": "Veja como profissionais usam o BlendWorks",
+    "ecommerce": {
+      "title": "E-commerce",
+      "desc": "Gere variações de produtos, SKUs e combinações de estoque automaticamente.",
+      "example": "Exemplo:",
+      "example_text": "Camiseta × Cor × Tamanho = 150 variações"
+    },
+    "marketing": {
+      "title": "Email Marketing",
+      "desc": "Crie milhares de linhas de assunto e variações de email para testes A/B.",
+      "example": "Exemplo:",
+      "example_text": "Assunto + Emoji + CTA = 500 testes"
+    },
+    "development": {
+      "title": "Desenvolvimento",
+      "desc": "Gere dados de teste, endpoints de API e combinações de configuração.",
+      "example": "Exemplo:",
+      "example_text": "API + Método + Versão = Casos de teste"
+    },
+    "analytics": {
+      "title": "Análise de Dados",
+      "desc": "Crie conjuntos de dados para análise, relatórios e projetos de ciência de dados.",
+      "example": "Exemplo:",
+      "example_text": "Métricas × Tempo × Segmentos = Relatórios"
+    }
+  },
+  
+  "testimonials": {
+    "title": "O Que Nossos Usuários Dizem",
+    "subtitle": "Junte-se a milhares de profissionais satisfeitos",
+    "sarah": {
+      "text": "O BlendWorks economizou 20 horas por semana da nossa equipe de marketing. Agora podemos testar centenas de variações de anúncios em minutos ao invés de dias.",
+      "role": "Diretora de Marketing, TechCorp"
+    },
+    "carlos": {
+      "text": "Como desenvolvedor, uso o BlendWorks para gerar dados de teste. É incrivelmente rápido e a integração da API é perfeita.",
+      "role": "Desenvolvedor Sênior, StartupXYZ"
+    },
+    "emma": {
+      "text": "Perfeito para nossa loja de e-commerce. Geramos 10.000 variações de produtos em segundos. O ROI é incrível!",
+      "role": "Gerente de E-commerce, FashionHub"
+    }
+  },
+  
+  "cta": {
+    "title": "Pronto Para Multiplicar Sua Produtividade Por 10?",
+    "subtitle": "Junte-se a milhares de profissionais que usam o BlendWorks para otimizar seus fluxos de trabalho.",
+    "button": "Começar Grátis Agora",
+    "guarantee": "Garantia de reembolso de 30 dias"
+  },
+  
+  "footer": {
+    "description": "A ferramenta mais poderosa para gerar combinações profissionais.",
+    "rights": "Todos os direitos reservados.",
+    "product": {
+      "title": "Produto",
+      "features": "Recursos",
+      "pricing": "Preços",
+      "generator": "Gerador",
+      "api": "API"
+    },
+    "resources": {
+      "title": "Recursos",
+      "course": "Curso",
+      "blog": "Blog",
+      "help": "Central de Ajuda",
+      "docs": "Documentação"
+    },
+    "company": {
+      "title": "Empresa",
+      "about": "Sobre",
+      "affiliate": "Afiliados",
+      "contact": "Contato",
+      "careers": "Carreiras"
+    },
+    "legal": {
+      "title": "Legal",
+      "privacy": "Política de Privacidade",
+      "terms": "Termos de Serviço",
+      "cookies": "Política de Cookies",
+      "gdpr": "LGPD"
+    }
+  },
+  
+  "floating": {
+    "free": "Grátis"
+  },
+  
+  "exit_popup": {
+    "title": "🎁 Espera! Leve Isso GRÁTIS",
+    "subtitle": "Antes de sair, pegue nosso gerador gratuito com 1000 combinações!",
+    "benefit1": "✅ Acesso imediato sem cartão de crédito",
+    "benefit2": "✅ 50 templates prontos inclusos",
+    "benefit3": "✅ Tutorial completo em vídeo",
+    "benefit4": "✅ Suporte gratuito por email",
+    "email": "Seu melhor email",
+    "name": "Seu nome",
+    "interest": {
+      "placeholder": "Como você vai usar?",
+      "business": "Negócios/Empresa",
+      "marketing": "Marketing Digital",
+      "development": "Desenvolvimento",
+      "research": "Pesquisa/Análise",
+      "personal": "Uso Pessoal"
+    },
+    "cta": "Quero o Acesso Grátis Agora!",
+    "social_proof": "✨ +50.000 pessoas já baixaram"
+  }
+}

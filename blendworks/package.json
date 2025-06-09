@@ -1,0 +1,66 @@
+{
+  "name": "blendworks",
+  "version": "1.0.0",
+  "description": "Professional combination generator with global payments, multi-language support, and intelligent lead generation",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "vercel build",
+    "deploy": "vercel --prod",
+    "start": "vercel dev",
+    "test": "node test/run-tests.js",
+    "lint": "eslint assets/js --ext .js",
+    "format": "prettier --write assets/js/**/*.js assets/css/**/*.css",
+    "analyze": "node scripts/analyze-bundle.js",
+    "translations:extract": "node scripts/extract-translations.js",
+    "translations:validate": "node scripts/validate-translations.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.8",
+    "stripe": "^14.15.0",
+    "crypto-js": "^4.2.0",
+    "nodemailer": "^6.9.8",
+    "i18next": "^23.7.16",
+    "i18next-browser-languagedetector": "^7.2.0",
+    "chart.js": "^4.4.1"
+  },
+  "devDependencies": {
+    "vercel": "^32.7.2",
+    "eslint": "^8.56.0",
+    "prettier": "^3.1.1",
+    "@types/node": "^20.10.6"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "combinations",
+    "generator",
+    "productivity",
+    "automation",
+    "saas",
+    "multi-language",
+    "global-payments",
+    "lead-generation",
+    "analytics",
+    "b2b"
+  ],
+  "author": {
+    "name": "Diego Anes",
+    "email": "diego@blendworks.com",
+    "url": "https://blendworks.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AnesDiego/blendworks.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AnesDiego/blendworks/issues"
+  },
+  "homepage": "https://blendworks.com",
+  "funding": {
+    "type": "individual",
+    "url": "https://blendworks.com/sponsor"
+  }
+}
