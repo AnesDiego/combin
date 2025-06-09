@@ -1,0 +1,34 @@
+/* Paleta de Cores - Deep Tech & Royal Purple */
+:root {
+    /* Cores principais */
+    --bg-primary: #0A0A0A;
+    --bg-secondary: #1A1A1A;
+    --purple-btn: #8A2BE2;
+    --purple-btn-hover: #9E5BEE;
+    --text-light: #E0E0E0;
+    --text-muted: #A0A0A0;
+    --border-dark: #333333;
+    --accent-glow: rgba(138, 43, 226, 0.4);
+    --error-red: #FF0000;
+    --link-color: #8A2BE2;
+    --link-hover: #9E5BEE;
+    
+    /* Sombras */
+    --shadow-light: 0 2px 8px rgba(138, 43, 226, 0.2);
+    --shadow-medium: 0 4px 15px rgba(138, 43, 226, 0.3);
+    --shadow-heavy: 0 8px 25px rgba(138, 43, 226, 0.4);
+    
+    /* Transições */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+}
+
+/* Tema claro (para futuras implementações) */
+[data-theme="light"] {
+    --bg-primary: #FFFFFF;
+    --bg-secondary: #F8F9FA;
+    --text-light: #212529;
+    --text-muted: #6C757D;
+    --border-dark: #DEE2E6;
+}

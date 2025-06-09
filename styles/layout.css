@@ -1,0 +1,51 @@
+/* Reset e base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: var(--bg-primary);
+    color: var(--text-light);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Layout principal */
+.main-content {
+    flex: 1;
+    padding: 20px 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background: var(--bg-secondary);
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    border: 1px solid var(--border-dark);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        margin: 0 10px;
+        padding: 15px;
+    }
+    
+    .main-content {
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        margin: 0 5px;
+        padding: 10px;
+    }
+}
