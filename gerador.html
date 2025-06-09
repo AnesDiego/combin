@@ -5,280 +5,138 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerador de Combinações Online</title>
     <style>
-        :root {
-            /* Paleta de Cores Personalizada */
-            --primary: #1a365d;
-            --primary-light: #2c5282;
-            --primary-hover: #2a4365;
-            --accent: #ff6b35;
-            --accent-light: #ff8c69;
-            --accent-dark: #e55a2b;
-            --background: #f8fafc;
-            --card-bg: #ffffff;
-            --text-primary: #1a202c;
-            --text-secondary: #4a5568;
-            --border: #e2e8f0;
-            --success: #48bb78;
-            --warning: #ed8936;
-            --error: #f56565;
-            --premium: #805ad5;
-        }
-
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 20px;
-            background-color: var(--background);
-            color: var(--text-primary);
+            background-color: #f4f4f4;
+            color: #333;
         }
         .container {
             max-width: 900px;
             margin: auto;
-            background: var(--card-bg);
+            background: #fff;
             padding: 20px 30px;
             border-radius: 8px;
-            box-shadow: 0 0 20px rgba(26, 54, 93, 0.1);
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
         h1, h2 {
-            color: var(--primary);
-        }
-        h1 {
-            border-bottom: 3px solid var(--accent);
-            padding-bottom: 10px;
+            color: #0056b3;
         }
         .list-group {
             margin-bottom: 20px;
-            border: 1px solid var(--border);
+            border: 1px solid #ddd;
             padding: 15px;
-            border-radius: 8px;
-            background-color: var(--background);
-            transition: border-color 0.3s ease;
-        }
-        .list-group:hover {
-            border-color: var(--primary-light);
+            border-radius: 5px;
+            background-color: #f9f9f9;
         }
         .list-group label {
             display: block;
             margin-bottom: 5px;
             font-weight: bold;
-            color: var(--text-secondary);
         }
         .list-group textarea {
             width: calc(100% - 12px);
             min-height: 80px;
-            padding: 8px;
-            border: 2px solid var(--border);
-            border-radius: 6px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
             resize: vertical;
-            transition: border-color 0.3s ease;
-            font-family: inherit;
-        }
-        .list-group textarea:focus {
-            outline: none;
-            border-color: var(--primary-light);
-            box-shadow: 0 0 0 3px rgba(44, 82, 130, 0.1);
         }
         .list-actions {
             text-align: right;
-            margin-top: 8px;
+            margin-top: 5px;
         }
         .list-actions button {
-            background-color: var(--error);
+            background-color: #dc3545;
             color: white;
             border: none;
-            padding: 6px 12px;
-            border-radius: 6px;
+            padding: 5px 10px;
+            border-radius: 4px;
             cursor: pointer;
             font-size: 0.8em;
-            transition: background-color 0.3s ease;
         }
         .list-actions button:hover {
-            background-color: #e53e3e;
+            background-color: #c82333;
         }
         .add-list-btn {
-            background-color: var(--success);
+            background-color: #28a745;
             color: white;
             border: none;
-            padding: 12px 20px;
-            border-radius: 8px;
+            padding: 10px 15px;
+            border-radius: 5px;
             cursor: pointer;
             margin-top: 10px;
-            font-weight: 600;
-            transition: background-color 0.3s ease;
         }
         .add-list-btn:hover {
-            background-color: #38a169;
+            background-color: #218838;
         }
         .add-list-btn:disabled {
-            background-color: var(--text-secondary);
+            background-color: #cccccc;
             cursor: not-allowed;
         }
         .config-group {
             margin-bottom: 20px;
-            padding: 20px;
-            border: 2px solid var(--border);
-            border-radius: 8px;
-            background-color: var(--background);
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
         }
         .config-group label {
             margin-right: 15px;
-            color: var(--text-secondary);
-            font-weight: 500;
         }
         input[type="text"], input[type="radio"] {
-            margin-right: 8px;
-        }
-        input[type="text"] {
-            padding: 6px 10px;
-            border: 2px solid var(--border);
-            border-radius: 4px;
-            transition: border-color 0.3s ease;
-        }
-        input[type="text"]:focus {
-            outline: none;
-            border-color: var(--primary-light);
+            margin-right: 5px;
         }
         .generate-btn {
-            background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+            background-color: #007bff;
             color: white;
             border: none;
-            padding: 18px 30px;
+            padding: 15px 30px;
             font-size: 1.2em;
-            font-weight: bold;
-            border-radius: 8px;
+            border-radius: 5px;
             cursor: pointer;
             display: block;
             width: 100%;
             margin-top: 20px;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-            letter-spacing: 1px;
         }
         .generate-btn:hover {
-            background: linear-gradient(135deg, var(--accent-dark), #d64925);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+            background-color: #0056b3;
         }
         #results {
             width: calc(100% - 12px);
             min-height: 200px;
-            padding: 12px;
-            border: 2px solid var(--border);
-            border-radius: 8px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
             resize: vertical;
             margin-top: 10px;
             font-family: 'Courier New', Courier, monospace;
             font-size: 0.9em;
-            background-color: var(--background);
-        }
-        #results:focus {
-            outline: none;
-            border-color: var(--primary-light);
         }
         .result-info {
-            margin-top: 15px;
+            margin-top: 10px;
             font-weight: bold;
-            color: var(--primary);
-            font-size: 1.1em;
         }
         .result-actions button {
-            background-color: var(--primary);
+            background-color: #6c757d;
             color: white;
             border: none;
-            padding: 10px 18px;
-            border-radius: 6px;
+            padding: 8px 15px;
+            border-radius: 4px;
             cursor: pointer;
-            margin-top: 12px;
-            margin-right: 12px;
-            font-weight: 500;
-            transition: background-color 0.3s ease;
+            margin-top: 10px;
+            margin-right: 10px;
         }
         .result-actions button:hover {
-            background-color: var(--primary-hover);
-        }
-        .result-actions button:last-child {
-            background-color: var(--premium);
-        }
-        .result-actions button:last-child:hover {
-            background-color: #6b46c1;
+            background-color: #5a6268;
         }
         .ad-space {
-            background: linear-gradient(135deg, var(--border), #cbd5e0);
+            background-color: #e0e0e0;
             text-align: center;
-            padding: 15px;
-            margin: 25px 0;
-            border: 2px dashed var(--text-secondary);
-            border-radius: 8px;
-            color: var(--text-secondary);
-            font-style: italic;
-        }
-        #premium-section {
-            margin-top: 40px;
-            border-top: 3px solid var(--premium);
-            padding-top: 25px;
-            text-align: center;
-            background: linear-gradient(135deg, #f7fafc, var(--background));
-            border-radius: 12px;
-            padding: 30px;
-        }
-        #premium-section h3 {
-            color: var(--premium);
-            margin-bottom: 15px;
-        }
-        #premium-section p {
-            color: var(--text-secondary);
-            margin-bottom: 20px;
-        }
-        #premium-section button {
-            background: linear-gradient(135deg, var(--warning), #d69e2e);
-            color: var(--text-primary);
-            padding: 12px 25px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight: bold;
-            font-size: 1.1em;
-            transition: all 0.3s ease;
-        }
-        #premium-section button:hover {
-            background: linear-gradient(135deg, #d69e2e, #b7791f);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(237, 137, 54, 0.3);
-        }
-        .footer {
-            text-align: center;
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid var(--border);
-            font-size: 0.9em;
-            color: var(--text-secondary);
-        }
-        .footer a {
-            color: var(--primary);
-            text-decoration: none;
-            margin: 0 8px;
-        }
-        .footer a:hover {
-            color: var(--accent);
-            text-decoration: underline;
-        }
-        /* Melhorias de UX */
-        .config-group > div {
-            margin-bottom: 15px;
-        }
-        .config-group > div:last-child {
-            margin-bottom: 0;
-        }
-        /* Responsividade aprimorada */
-        @media (max-width: 768px) {
-            .container {
-                margin: 10px;
-                padding: 15px 20px;
-            }
-            .generate-btn {
-                font-size: 1.1em;
-                padding: 16px 20px;
-            }
+            padding: 10px 0;
+            margin: 20px 0;
+            border: 1px dashed #bbb;
+            color: #777;
         }
     </style>
 </head>
@@ -295,53 +153,54 @@
         <div id="listInputs">
             </div>
         <button id="addListBtn" class="add-list-btn">+ Adicionar Nova Lista</button>
-        <p style="margin-top: 8px; font-size: 0.9em; color: var(--text-secondary);">
-            <a href="#premium-section" style="color: var(--premium);">Quer mais listas? Torne-se Premium!</a>
+        <p style="margin-top: 5px; font-size: 0.9em;">
+            <a href="#premium-section">Quer mais listas? Torne-se Premium!</a>
         </p>
 
         <h2>2. Configurações de Geração</h2>
         <div class="config-group">
             <div>
-                <strong style="color: var(--primary);">Tipo:</strong><br>
+                Tipo:
                 <label><input type="radio" name="generationType" value="combinations" checked> Combinações (Ordem não importa)</label>
                 <label><input type="radio" name="generationType" value="permutations"> Permutações (Ordem importa)</label>
             </div>
-            <div>
-                <strong style="color: var(--primary);">Separador de Itens:</strong><br>
+            <div style="margin-top: 10px;">
+                Separador de Itens:
                 <label><input type="radio" name="separatorType" value="space" checked> Espaço</label>
                 <label><input type="radio" name="separatorType" value="comma"> Vírgula (,)</label>
                 <label><input type="radio" name="separatorType" value="hyphen"> Hífen (-)</label>
                 <label><input type="radio" name="separatorType" value="custom"> Outro:</label>
-                <input type="text" id="customSeparator" placeholder="Ex: e" style="width: 60px;">
+                <input type="text" id="customSeparator" placeholder="Ex: e" style="width: 50px;">
             </div>
-            <div>
-                <strong style="color: var(--primary);">Personalização:</strong><br>
-                Prefixo (opcional): <input type="text" id="prefix" placeholder="Ex: 'SKU-'" style="width: 120px;">
-                Sufixo (opcional): <input type="text" id="suffix" placeholder="Ex: '-FINAL'" style="width: 120px;">
+            <div style="margin-top: 10px;">
+                Prefixo (opcional): <input type="text" id="prefix" placeholder="Ex: 'SKU-'">
+            </div>
+            <div style="margin-top: 5px;">
+                Sufixo (opcional):  <input type="text" id="suffix" placeholder="Ex: '-FINAL'">
             </div>
         </div>
 
-        <button id="generateBtn" class="generate-btn">🚀 GERAR COMBINAÇÕES!</button>
+        <button id="generateBtn" class="generate-btn">GERAR COMBINAÇÕES!</button>
 
         <h2>3. Resultado</h2>
         <div class="result-info">Total de Combinações Geradas: <span id="totalCombinations">0</span></div>
         <textarea id="results" readonly></textarea>
         <div class="result-actions">
-            <button id="copyResultsBtn">📋 Copiar para Área de Transferência</button>
-            <button id="downloadCsvBtn">💎 Baixar CSV (Premium)</button>
+            <button id="copyResultsBtn">Copiar para Área de Transferência</button>
+            <button id="downloadCsvBtn">Baixar CSV (Premium)</button>
         </div>
 
         <div class="ad-space">
             [Espaço para Anúncios - Google AdSense]
         </div>
 
-        <div id="premium-section">
-            <h3>🌟 Desbloqueie o Poder Total com o Plano Premium!</h3>
+        <div id="premium-section" style="margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px; text-align: center;">
+            <h3>Desbloqueie o Poder Total com o Plano Premium!</h3>
             <p>Remova limites de listas e itens, gere milhões de combinações, baixe em CSV e livre-se dos anúncios.</p>
-            <button>✨ Saiba Mais sobre o Premium</button>
+            <button style="background-color: #ffc107; color: #333; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">Saiba Mais sobre o Premium</button>
         </div>
 
-        <div class="footer">
+        <div style="text-align: center; margin-top: 30px; font-size: 0.9em; color: #777;">
             <p>&copy; 2025 SeuSite.com - Todos os direitos reservados.</p>
             <a href="#">Sobre</a> | <a href="#">Contato</a> | <a href="#">Política de Privacidade</a>
         </div>
@@ -357,9 +216,9 @@
         const downloadCsvBtn = document.getElementById('downloadCsvBtn');
         
         let listCounter = 0;
-        const FREE_LIST_LIMIT = 6; // Limite de listas gratuitas
-        const FREE_ITEM_LIMIT_PER_LIST = 10; // Limite de itens por lista gratuita
-        const FREE_COMBINATION_LIMIT = 5000000; // Limite total de combinações gratuitas
+        const FREE_LIST_LIMIT = 3; // Limite de listas gratuitas
+        const FREE_ITEM_LIMIT_PER_LIST = 3; // Limite de itens por lista gratuita
+        const FREE_COMBINATION_LIMIT = 18; // Limite total de combinações gratuitas
 
         function addListInput() {
             if (listCounter >= FREE_LIST_LIMIT) {
@@ -377,7 +236,7 @@
                 <input type="text" class="list-title" placeholder="Ex: Cores">
                 <textarea class="list-items" placeholder="Digite seus itens, um por linha (máximo ${FREE_ITEM_LIMIT_PER_LIST} para o plano gratuito)." oninput="checkItemLimit(this)"></textarea>
                 <div class="list-actions">
-                    <button onclick="removeListInput(${listCounter})">🗑️ Remover Lista</button>
+                    <button onclick="removeListInput(${listCounter})">Remover Lista</button>
                 </div>
             `;
             listInputsDiv.appendChild(listGroup);
@@ -426,10 +285,19 @@
                     results.push(firstItem);
                 }
             }
+
+            // Simple permutation logic for 2 arrays (more complex for n arrays)
+            // For true permutations of n arrays, this function would need to be more advanced
+            // For now, it behaves more like combinations, prefixing suffixing at the end.
+            // If strict 'permutations' of the same list items are needed, the logic changes significantly.
+            // For cross-list variations, combinations (Cartesian product) is usually what's desired.
             
             return results;
         }
 
+        // Function to generate permutations (order matters within a single list)
+        // This is a more complex recursive function for permutations of items within a single list.
+        // For combining multiple lists, the getCombinations (Cartesian product) is typically what users mean.
         function generatePermutationsSingleList(arr) {
             const result = [];
             function permute(current, remaining) {
@@ -479,21 +347,34 @@
             let generated = [];
 
             if (generationType === 'combinations') {
+                 // For combinations (Cartesian product of multiple lists)
+                // This is the most common use case for "Gerador de Combinações e Permutações para Listas Específicas"
+                // It means "take one item from list 1, one from list 2, etc., and combine them"
+                // The current `getCombinations` function already handles this as a Cartesian product.
                 function cartesianProduct(arr) {
                     return arr.reduce((a, b) => a.flatMap(d => b.map(e => [d, e].flat())));
                 }
 
                 const rawCombinations = cartesianProduct(allLists);
                 generated = rawCombinations.map(combo => {
+                    // Ensure combo is an array, even for single list input
                     const items = Array.isArray(combo) ? combo : [combo];
                     return prefix + items.join(separator) + suffix;
                 });
 
             } else { // permutations
+                // If the user wants permutations of items *within* a single list, this needs to be a different flow.
+                // If they want permutations *across* multiple lists, then 'combinations' as cartesian product is typically what they mean.
+                // For simplicity in this example, if 'permutations' is selected and there's only one list, we'll permute that list.
+                // If multiple lists, it will behave like combinations (Cartesian product with specific join).
                 if (allLists.length === 1) {
                     generated = generatePermutationsSingleList(allLists[0]).map(p => prefix + p + suffix);
                 } else {
-                    alert("Para múltiplas listas, o tipo 'Permutações' funcionará como 'Combinações' (Produto Cartesiano) para evitar complexidade excessiva nesta versão de demonstração.");
+                    // For multiple lists, the "permutation" usually means the Cartesian product (combinations)
+                    // followed by permutation of items within *each generated string* if specific ordering needed.
+                    // This is usually overly complex for a simple tool.
+                    // For this example, we'll default to the combination behavior for multiple lists.
+                    alert("Para múltiplas listas, o tipo 'Permutações' funcionará como 'Combinações' (Produto Cartesiano) para evitar complexidade excessiva nesta versão de demonstração. Para permutações de itens dentro de uma única lista, insira apenas uma lista.");
                     function cartesianProduct(arr) {
                         return arr.reduce((a, b) => a.flatMap(d => b.map(e => [d, e].flat())));
                     }
@@ -505,6 +386,7 @@
                     });
                 }
             }
+
 
             if (generated.length > FREE_COMBINATION_LIMIT) {
                 alert(`Você excedeu o limite de ${FREE_COMBINATION_LIMIT} combinações para o plano gratuito (${generated.length} geradas). Torne-se Premium para gerar mais!`);
@@ -526,6 +408,7 @@
         });
         downloadCsvBtn.addEventListener('click', () => {
             alert('Este é um recurso Premium! Torne-se Premium para baixar seus resultados.');
+            // Implementar lógica de download para usuários premium
         });
 
         // Initial list input
